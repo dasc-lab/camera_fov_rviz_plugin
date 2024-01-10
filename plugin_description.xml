@@ -1,0 +1,10 @@
+<library path="camera_fov_rviz_plugin">
+  <class name="camera_fov_rviz_plugin/CameraFov"
+         type="camera_fov_rviz_plugin::CameraFovDisplay"
+         base_class_type="rviz_common::Display">
+    <description>
+      Displays cameras field of view from sensor_msgs::msg::CameraInfo messages.
+    </description>
+    <message_type>sensor_msgs/msg/CameraInfo</message_type>
+  </class>
+</library>
