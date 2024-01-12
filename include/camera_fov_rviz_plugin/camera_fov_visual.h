@@ -5,7 +5,8 @@
 
 #include <Ogre.h>
 
-#include "rviz_rendering/objects/arrow.hpp"
+// #include "rviz_rendering/objects/arrow.hpp"
+#include "rviz_rendering/objects/line.hpp"
 #include "sensor_msgs/msg/camera_info.hpp"
 
 namespace Ogre {
@@ -14,7 +15,8 @@ class Quaternion;
 
 namespace rviz_rendering {
 class Arrow;
-}
+class Line;
+} // namespace rviz_rendering
 
 namespace camera_fov_rviz_plugin {
 
@@ -49,7 +51,8 @@ public:
 
 private:
   // The object implementing the actual arrow shape.
-  std::shared_ptr<rviz_rendering::Arrow> arrow_;
+  // std::array<std::shared_ptr<rviz_rendering::Arrow>, 4> arrows_;
+  std::array<std::shared_ptr<rviz_rendering::Line>, 8> lines_;
 
   // A SceneNode whose pose is set to match the coordinate frame of
   // the CameraInfo message header.

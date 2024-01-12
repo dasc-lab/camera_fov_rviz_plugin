@@ -25,12 +25,6 @@ CameraFovDisplay::CameraFovDisplay() {
       "Alpha", 1.0, "0 is fully transparent, 1.0 is fully opaque.", this,
       SLOT(updateColorAndAlpha()));
 
-  horizontal_fov_property_ = new rviz_common::properties::FloatProperty(
-      "Horizontal FOV (degrees)", 90.0, "Horizontal field of view in degrees.",
-      this, SLOT(updateHorizontalFov()));
-  horizontal_fov_property_->setMin(0.0);
-  horizontal_fov_property_->setMax(360.0);
-
   history_length_property_ = new rviz_common::properties::IntProperty(
       "History Length", 1, "Number of prior measurements to display.", this,
       SLOT(updateHistoryLength()));
